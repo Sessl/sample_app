@@ -20,13 +20,13 @@ describe "UserPages" do
 
         it { should have_selector('title', text: 'Sign up')}
         it { should have_content('error')}
-        it { should have_content('Password digest can\'t be blank')}
+      #  it { should have_content('Password digest can\'t be blank')}
         it { should have_content('Name can\'t be blank')}
         it { should have_content('Email can\'t be blank')}
         it { should have_content('Email is invalid')}
         it { should have_content('Password can\'t be blank')}
         it { should have_content('Password is too short (minimum is 6 characters)')}
-        it { should have_content('Password confirmation can\' be blank')}
+        it { should have_content('Password confirmation can\'t be blank')}
       end
 
     end

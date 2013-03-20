@@ -1,8 +1,9 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+# Very important to make sure there are only spaces SSEE
 
 en:
   activerecord:
-  attributes:
-    user:
-      password_digest: "Password"
+    attributes:
+      user:
+       password_digest: "Password"
