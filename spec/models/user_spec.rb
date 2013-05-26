@@ -26,7 +26,7 @@ describe User do
 	it {should respond_to(:password_confirmation)}
 	it {should respond_to(:remember_token)}
 	it {should respond_to(:admin)}
-	it {should respond_to (:authenticate)}
+	it {should respond_to(:authenticate)}
 
 	it {should be_valid}
 	it {should_not be_admin}
@@ -38,6 +38,14 @@ describe User do
 		end
 
 		it { should be_admin}
+	end
+
+	describe "admin attribute" do
+		it "should not be accessible" do
+			expect do
+				User.new(admin:  true)
+			end.to raise_error(ActiveModel::MassAssignmentSecurity::Error)
+		end
 	end
 
 	describe "when name is not present" do
